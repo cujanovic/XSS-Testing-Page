@@ -56,6 +56,11 @@
             <td>&lt;input value=foo&gt;...&lt;/input&gt;</td>
           </tr>
           <tr>
+            <td>urlencodeuri</td>
+            <td>Test if browser sends urlencode URI</td>
+            <td><a href="?urlencodeuri=foo>'<;">index.php?urlencodeuri=foo>'<;</a></td>
+            <td>/xss/?urlencodeuri=foo%3E%27%3C;</td>
+          </tr>
             <td>html</td>
             <td>In an HTML context</td>
             <td><a href="?html=foo">index.php?html=foo</a></td>
@@ -144,8 +149,10 @@
         <div custAttr="<?php if (isset($_REQUEST['doubleQuotedAttributeValue'])) { echo $_REQUEST['doubleQuotedAttributeValue']; } ?>">&nbsp;</div>
         <div custAttr=<?php if (isset($_REQUEST['unquotedAttributeValue'])) { echo $_REQUEST['unquotedAttributeValue']; } ?>>&nbsp;</div>
 
+        <?php if (isset($_REQUEST['urlencodeuri'])) { echo $_SERVER['REQUEST_URI']; } ?>
+
         <?php if (isset($_REQUEST['html'])) { echo $_REQUEST['html']; } ?>
-        
+
         <?php if (isset($_REQUEST['ahref'])) { echo "<a href=\"".$_REQUEST['ahref']."\">".$_REQUEST['ahref']."</a>"; } ?>
 
         <!-- <?php if (isset($_REQUEST['htmlComment'])) { echo $_REQUEST['htmlComment']; } ?> -->

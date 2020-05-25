@@ -61,6 +61,12 @@
             <td><a href="?urlencodeuri=foo>'<;">?urlencodeuri=foo>'<;</a></td>
             <td>/xss/?urlencodeuri=foo%3E%27%3C;</td>
           </tr>
+          <tr>
+            <td>dom</td>
+            <td>Test DOM</td>
+            <td><a href="/xss/dom/#<s>sss</s>">/dom/#&lt;s&gt;sss&lt;/s&gt;</a></td>
+            <td>DOM</td>
+          </tr>
             <td>html</td>
             <td>In an HTML context</td>
             <td><a href="?html=foo">?html=foo</a></td>

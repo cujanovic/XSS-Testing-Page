@@ -59,12 +59,12 @@
             <td>urlencodeuri</td>
             <td>Test if browser sends urlencode URI</td>
             <td><a href="?urlencodeuri=foo>'<;">?urlencodeuri=foo>'<;</a></td>
-            <td>/xss/?urlencodeuri=foo%3E%27%3C;</td>
+            <td>?urlencodeuri=foo%3E%27%3C;</td>
           </tr>
           <tr>
             <td>dom</td>
             <td>Test DOM</td>
-            <td><a href="/xss/dom/#<s>sss</s>">/dom/#&lt;s&gt;sss&lt;/s&gt;</a></td>
+            <td><a href="./dom/#<s>sss</s>">/dom/#&lt;s&gt;sss&lt;/s&gt;</a></td>
             <td>DOM</td>
           </tr>
             <td>html</td>

@@ -1,5 +1,6 @@
 <?php
-  header('X-XSS-Protection: 0');
+  $headervalue = 'X-XSS-Protection: 0';
+  header($headervalue);
 ?><!doctype html>
 <html>
     <head>
@@ -15,6 +16,7 @@
     </head>
     <body>
       <h1>XSS Testing Page</h1>
+      <?php echo 'Server header -> '.$headervalue ?>
       ======================================================================================================================
       <table>
         <thead>

@@ -16,7 +16,8 @@
     </head>
     <body>
       <h1>XSS Testing Page</h1>
-      <?php echo 'Server header -> '.$headervalue ?>
+      <h4><?php echo 'Server header -> '.$headervalue ?></h4>
+
       ======================================================================================================================
       <table>
         <thead>

@@ -1,0 +1,4 @@
+# Always set Cache-Control to no-cache no-store must-revalidate
+Header always set Cache-Control "no-store, no-cache, must-revalidate"
+# Always set Pragma to no-cache
+Header always set Pragma no-cache

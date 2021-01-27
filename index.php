@@ -16,6 +16,7 @@
     </head>
     <body>
       <h1>XSS Testing Page</h1>
+      <h3><a href="https://github.com/cujanovic/XSS-Testing-Page">https://github.com/cujanovic/XSS-Testing-Page</a></h3>
       <h4><?php echo 'Server header -> '.$headervalue ?></h4>
 
       ======================================================================================================================
